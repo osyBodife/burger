@@ -1,0 +1,22 @@
+body{
+    background-color:#ff9933;
+}
+.top{
+    margin-top: 50px;
+    background-color: whte;
+    font-size: 30px;
+    text-align: center;
+}
+form{ 
+
+position: relative;
+  left: 510px;
+  top: 100px;
+
+
+}
+.left{
+    width: 33%;
+    float: left;
+    background-color: yellow;
+}

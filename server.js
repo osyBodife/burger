@@ -23,7 +23,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 var mysql = require("mysql");
-
+app.use(express.static('public/assets'))
 //access routes created in other .js files
 require('./routing/apiroutes.js')(app);
 
