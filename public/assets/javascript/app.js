@@ -5,17 +5,18 @@
 
 function createImgDiv(){
     var imgDiv = $("<div>");
-    //add attributes to the button just created
-    //btnClass is defined in .css file
-    imgDiv.addClass("top");
-    //data-type is a data* attribute, provides the name the of button
-    imgDiv.attr("Id", "top");
-
-    //write the name of each button
-    imgDiv.text("Add or Eat Burger");
-
-    //display button on home page            
-    $("body").append(img);
+    //add attributes to the button just created    
+    //add class to the image Div
+    imgDiv.addClass("imgItem");
+    //create the image tag to house src
+    let burgerImg = $("<img>");
+    //assign image src to the results
+    burgerImg.attr("src", "img/burger_image.jpg");
+    burgerImg.addClass("burger-image");
+    //append image to images div
+    imgDiv.append(burgerImg);
+    //display image on home page            
+    $("body").append(imgDiv);
 
 }
 function createTopDiv() {
@@ -52,13 +53,31 @@ function createLeftDiv(){
    
 
 }
+//cretate footer
+function createFooterDiv() {
 
+    var footer = $("<div>");
+    //add attributes to the button just created
+    //btnClass is defined in .css file
+    footer.addClass("footer");
+    //data-type is a data* attribute, provides the name the of button
+    footer.attr("Id", "footer");
+
+    //write the name of each button
+    footer.html("&#169 Osy Odife-2019");
+
+    //display button on home page            
+    $("body").append(footer);
+
+
+}
 //create function to create a form on page load
 function createFormField() {
     $form = $("<form></form>");
     $form.append('<input type="text" name="burger" id="burger">');
-    $form.append('<button type="submit" form="nameform" >Add a Burger</button>');   
-    createLeftDiv(); 
+    $form.append('<br>');
+    $form.append('<button type="submit" form="nameform" id="submitBtn" >Add a Burger</button>');   
+   
     $('body').append($form);
 }
 //get the burgers in database and display them
@@ -73,8 +92,11 @@ function createFormField() {
 window.onload = function () {
     // alert("window has loaded")
     //call the function to create the  form and input field/submit button
-    createTopDiv()
+    createImgDiv();
+    createTopDiv();    
+    createLeftDiv(); 
     createFormField() ;
+    createFooterDiv()
 
 
 }
