@@ -1,1 +1,12 @@
-<h2>Hellow World this the index page</h2>
+<h2>Hello World this the index page</h2>
+
+<ul>
+    {{#each burgers}}
+    <li>
+        <p>Name: {{burger_name}}</p>
+        <p>ID: {{id}}</p>
+        <p>status: {{devoured}}</p>
+        
+    </li>
+    {{/each}}
+</ul>

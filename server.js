@@ -17,7 +17,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 
-var exphbs = require("express-handlebars");
+var exphbs = require('express-handlebars');
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -28,10 +28,32 @@ var mysql = require("mysql");
 require('./routing/apiroutes.js')(app);
 
 
+// Import routes and give the server access to them.
+// var routes = require("./controllers/catsController.js");
+
+// app.use(routes);
+
 
 //access routes created in other .js files
 //require('./app/routing/apiRoutes.js')(app);
 //require('./app/routing/htmlRoutes.js')(app);
+// var connection = require("./config/connection.js");
+
+// // Root get route
+// app.get("/", function (req, res) {
+//     connection.query("SELECT * FROM burgers;", function (err, data) {
+//         if (err) throw err;
+
+
+//         // Test it
+//         // return res.send(data);
+
+//         //res.render("index", { burgers: data });
+//     });
+// });
+
+
+
 
 app.listen(PORT, function () {
     // Log (server-side) when our server has started
