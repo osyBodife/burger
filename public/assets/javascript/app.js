@@ -4,7 +4,7 @@
 //cretae div to container burger image
 
 function createImgDiv() {
-    createMainContainerDiv();
+    //createMainContainerDiv();
     var imgDiv = $("<div>");
     //add attributes to the button just created    
     //add class to the image Div
@@ -17,8 +17,8 @@ function createImgDiv() {
     //append image to images div
     imgDiv.append(burgerImg);
     //display image on home page            
-    //$("body").append(imgDiv);
-    mainDiv.append(imgDiv);
+    $("body").append(imgDiv);
+    //mainDiv.append(imgDiv);
 
 }
 function createMainContainerDiv() {
@@ -28,7 +28,7 @@ function createMainContainerDiv() {
     //btnClass is defined in .css file
     mainDiv.addClass("container");
     //data-type is a data* attribute, provides the name the of button
-    topDiv.attr("Id", "wrapper");
+    mainDiv.attr("Id", "wrapper");
 
     //write the name of each button
     //topDiv.text("Add or Eat Burger");
@@ -39,7 +39,7 @@ function createMainContainerDiv() {
 
 }
 function createTopDiv() {
-    createMainContainerDiv();
+    //createMainContainerDiv();
 
     var topDiv = $("<div>");
     //add attributes to the button just created
@@ -52,13 +52,13 @@ function createTopDiv() {
     topDiv.text("Add or Eat Burger");
 
     //display button on home page            
-    //$("body").append(topDiv);
-    mainDiv.append(topDiv);
+    $("body").append(topDiv);
+    //mainDiv.append(topDiv);
 
 
 }
 function createLeftDiv() {
-    createMainContainerDiv();
+    //createMainContainerDiv();
 
     var divFirst = $("<div>");
     //add attributes to the button just created
@@ -71,8 +71,8 @@ function createLeftDiv() {
     //divFirst.text("first Div");   
 
     //display button on home page            
-    //$("body").append(divFirst);
-    mainDiv.append(divFirst);
+    $("body").append(divFirst);
+    //mainDiv.append(divFirst);
 
 
 }
@@ -96,14 +96,14 @@ function createFooterDiv() {
 }
 //create function to create a form on page load
 function createFormField() {
-    createMainContainerDiv();
+    //createMainContainerDiv();
     $form = $("<form></form>");
     $form.append('<input type="text" name="burger" id="burger">');
     $form.append('<br>');
     $form.append('<button type="submit" form="nameform" id="submitBtn" >Add a Burger</button>');
 
-    //('body').append($form);
-    mainDiv.append($form);
+    $('body').append($form);
+    //mainDiv.append($form);
 }
 //get the burgers in database and display them
 // function getDbBurgers(){

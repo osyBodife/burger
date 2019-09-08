@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 var mysql = require("mysql");
 app.use(express.static('public/assets'))
 //access routes created in other .js files
-require('./routing/apiroutes.js')(app);
+require('./routes/apiroutes.js')(app);
 
 
 // Import routes and give the server access to them.

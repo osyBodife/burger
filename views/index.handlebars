@@ -1,11 +1,22 @@
 
-<ul>
+
+<div class="left">
     {{#each burgers}}
-    <li>
-        <p>Name: {{burger_name}}</p>
-        <p>ID: {{id}}</p>
-        <p>status: {{devoured}}</p>
-        
-    </li>
-    {{/each}}
-</ul>
+    <div class="row">
+      <div class="burger_container" id="{{id}}">
+        <p class="burgerToEat">
+            <img src="img/burger_image.jpg" id="imgburger">{{burger_name}}
+        </p>
+
+        <button class="btn" data-id="{{id}}" data-state="{{devoured}}">
+            {{#if devoured}} devoure{{else}} Devoure{{/if}}
+        </button>
+
+
+
+
+      </div>
+  </div>
+
+  {{/each}}
+</div >
