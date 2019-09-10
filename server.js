@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 //create instannces of express
 var app = express();
+require('dotenv').config();
 //set the listening port with default
 var PORT = process.env.PORT || 3000;
 //create json converters
@@ -26,6 +27,7 @@ var mysql = require("mysql");
 app.use(express.static('public/assets'))
 //access routes created in other .js files
 require('./routes/apiroutes.js')(app);
+
 
 
 // Import routes and give the server access to them.
