@@ -4,19 +4,48 @@
 <head>
     <meta charset="utf-8">
     <title>Burger App</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<link rel="stylesheet" href="/css/burger_style.css">
+    <link rel="stylesheet" href="/css/burger_style.css">
 
 </head>
+
 <body>
+    <div class="container" id="wrapper">
+        <div class="row" id="first_row">
+            <div class="col-md-3">
+                &nbsp;
+            </div>
+            <div class="col-md-6">
+                <div class="row">
 
+                    <form id="input_form">
+                        <p id="burger-image"><img src="img/burger_image.jpg"> </p>
+                        <br>
+                        <br>
+                        <p id="eat_burger">Eat de Burger </p>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" id="burger" name="burger_name">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
     {{{body}}}
-
-
-<script src="/javascript/app.js"></script>
+    </div>
+    <script src="/javascript/app.js"></script>
 </body>
 
 </html>

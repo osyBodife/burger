@@ -7,15 +7,16 @@ var orm = {
         connection.query("SELECT * FROM burgers", function (err, data) {
             if (err) cb(err, null);
             cb(null, data);
-            console.log(data);
+            //console.log(data);
         });
     },
   
-    insertOne: function (burgerName, cb) {
-        const sql = ` INSERT INTO burgers_db.burgers(burger_name, devoured) VALUES('${burgerName, false}')`;
+    addOne: function (burgerName, cb) {        
+        const sql = ` INSERT INTO burgers(burger_name) VALUES('${burgerName}')`;
         connection.query(sql, function (err, data) {
             if (err) cb(err, null);
             cb(null, data);
+            //console.log(data);
         });
     },
 
